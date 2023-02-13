@@ -25,6 +25,28 @@ class _DetailCardState extends State<DetailCard> {
             ],
           ),
           Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Icon(
+                      color: Colors.black,
+                      Icons.search,
+                      size: 25,
+                    ),
+                    Icon(
+                      Icons.dehaze_sharp,
+                      size: 25,
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
+          Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(),
@@ -68,7 +90,10 @@ class _DetailCardState extends State<DetailCard> {
                         child: CircleAvatar(
                           backgroundColor: Colors.white,
                           radius: 30,
-                          child: Icon(Icons.streetview,color: Colors.purple,),
+                          child: Icon(
+                            Icons.streetview,
+                            color: Colors.purple,
+                          ),
                         ),
                       ),
                       Container(
@@ -83,7 +108,10 @@ class _DetailCardState extends State<DetailCard> {
                         child: CircleAvatar(
                           backgroundColor: Colors.white,
                           radius: 30,
-                          child: Icon(Icons.square_outlined,color: Colors.orangeAccent,),
+                          child: Icon(
+                            Icons.square_outlined,
+                            color: Colors.orangeAccent,
+                          ),
                         ),
                       ),
                       Container(child: Text('Crime'))
@@ -96,7 +124,10 @@ class _DetailCardState extends State<DetailCard> {
                         child: CircleAvatar(
                           backgroundColor: Colors.white,
                           radius: 30,
-                          child: Icon(Icons.more_horiz_sharp,color: Colors.black26,),
+                          child: Icon(
+                            Icons.more_horiz_sharp,
+                            color: Colors.black26,
+                          ),
                         ),
                       ),
                       Container(
@@ -107,6 +138,7 @@ class _DetailCardState extends State<DetailCard> {
                 ],
               ),
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
                     margin: EdgeInsets.only(top: 50),
@@ -119,6 +151,7 @@ class _DetailCardState extends State<DetailCard> {
                   Container(
                     margin: EdgeInsets.only(top: 10),
                     child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Row(
@@ -146,7 +179,7 @@ class _DetailCardState extends State<DetailCard> {
                 child: Text(
                   'Real estate is a fiercely competitive business. The number of members in the National Association of Realtors (NAR)   as steadily increased since 2012, reaching 1.56 million in 2021, an all-time high. This growth in numbers has tracked right alongside an uptick in the volume of home sales, which has continued climbing since the financial crisis of'
                   '2008during the pandemic, over three million licensed realtors in the United States competed to sell',
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: 20, fontStyle: FontStyle.italic),
                 ),
               )
             ],
