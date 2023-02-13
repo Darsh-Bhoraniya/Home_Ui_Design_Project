@@ -8,7 +8,7 @@ class CardCreate extends StatefulWidget {
 
 class _CardCreateState extends State<CardCreate> {
   var imagelist = [
-    "assets/image/Home1.png",
+    "assets/image/homeimage3.png",
     'assets/image/homeimage2.png',
     "assets/image/Home1.jpeg"
   ];
@@ -44,8 +44,38 @@ class _CardCreateState extends State<CardCreate> {
                 child: Stack(
                   children: [
                     Image.asset(image, fit: BoxFit.fitWidth),
-                    Text(
-                      'Gujarat India',
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.white38,
+                              elevation: 12,
+                              shape: const RoundedRectangleBorder(
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(10),
+                                ),
+                              ),
+                            ),
+                            onPressed: () {},
+                            child: Column(
+                              children: [
+                                Row(
+
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(Icons.location_on),
+                                    Text("Gujrat India")
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
                     )
                   ],
                   fit: StackFit.expand,
@@ -97,7 +127,8 @@ class _CardCreateState extends State<CardCreate> {
                           Icon(
                             Icons.square_foot_rounded,
                             color: Colors.orange,
-                          ),Text("2100Squar")
+                          ),
+                          Text("2100Squar")
                         ],
                       ),
                     ),
