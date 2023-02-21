@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_ui_design/secondscreen.dart';
 
 class Mainscreen extends StatefulWidget {
   @override
@@ -33,20 +34,26 @@ class _MainscreenState extends State<Mainscreen> {
           Expanded(
             child: Column(
               children: [
-                Center(
-                  child: Container(
-                    margin: EdgeInsets.only(top: 50),
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          minimumSize: Size(327, 50),
-                          elevation: 10,
-                          shape: const RoundedRectangleBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(50)))),
-                      onPressed: () {},
-                      child: Text(
-                        'Create New Account',
-                        style: TextStyle(fontWeight: FontWeight.bold),
+                InkWell(
+                  child: Center(
+                    child: Container(
+                      margin: EdgeInsets.only(top: 50),
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            minimumSize: Size(327, 50),
+                            elevation: 10,
+                            shape: const RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(50)))),
+                        onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute(builder:(context) {
+                            return SecondScreen();
+                          }, ));
+                        },
+                        child: Text(
+                          'Create New Account',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
                       ),
                     ),
                   ),

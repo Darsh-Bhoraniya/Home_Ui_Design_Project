@@ -14,7 +14,10 @@ class _SecondScreenState extends State<SecondScreen> {
   List<Map> users = [];
 
   List<Widget> widgetsList = [
-    CardCreate(),
+    InkWell(
+      onTap: () {},
+      child: CardCreate(),
+    ),
     const Center(
       child: Text('No Data Found'),
     ),
@@ -38,10 +41,8 @@ class _SecondScreenState extends State<SecondScreen> {
             margin: EdgeInsets.only(left: 15),
             child: TextFormField(
               decoration: (const InputDecoration(
-                prefixIcon: Icon(Icons.search),
-                hintText: "Type any thing for Search"
-              )
-              ),
+                  prefixIcon: Icon(Icons.search),
+                  hintText: "Type any thing for Search")),
             ),
           ),
           Expanded(child: widgetsList[selectedindex]),
