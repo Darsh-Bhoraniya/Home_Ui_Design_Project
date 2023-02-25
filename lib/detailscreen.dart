@@ -1,3 +1,5 @@
+import 'dart:convert';
+import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 
 class DetailCard extends StatefulWidget {
@@ -9,6 +11,7 @@ class _DetailCardState extends State<DetailCard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: Stack(
         children: [
           Column(
@@ -174,12 +177,14 @@ class _DetailCardState extends State<DetailCard> {
                   ),
                 ],
               ),
-              Container(
-                margin: EdgeInsets.only(top: 20),
-                child: Text(
-                  'Real estate is a fiercely competitive business. The number of members in the National Association of Realtors (NAR)   as steadily increased since 2012, reaching 1.56 million in 2021, an all-time high. This growth in numbers has tracked right alongside an uptick in the volume of home sales, which has continued climbing since the financial crisis of'
-                  '2008during the pandemic, over three million licensed realtors in the United States competed to sell',
-                  style: TextStyle(fontSize: 20, fontStyle: FontStyle.italic),
+              SingleChildScrollView(
+                child: Container(
+                  margin: EdgeInsets.only(top: 20),
+                  child: Text(
+                    'Real estate is a fiercely competitive business. The number of members in the National Association of Realtors (NAR)   as steadily increased since 2012, reaching 1.56 million in 2021, an all-time high. This growth in numbers has tracked right alongside an uptick in the volume of home sales, which has continued climbing since the financial crisis of'
+                    '2008during the pandemic, over three million licensed realtors in the United States competed to sell',
+                    style: TextStyle(fontSize: 20, fontStyle: FontStyle.italic),
+                  ),
                 ),
               )
             ],
@@ -192,8 +197,8 @@ class _DetailCardState extends State<DetailCard> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    height: 50,
-                    width: 300,
+                    // height: 50,
+                    // width: 300,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white60,
@@ -213,8 +218,8 @@ class _DetailCardState extends State<DetailCard> {
                     ),
                   ),
                   Container(
-                    height: 50,
-                    width: 300,
+                    // height: 50,
+                    // width: 300,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue,

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:home_ui_design/detailscreen.dart';
 import 'package:home_ui_design/mainscreen.dart';
 import 'package:home_ui_design/secondscreen.dart';
-
 void main() {
   runApp(const MyApp());
 }
